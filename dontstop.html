@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Jaakko Puisto - Game Developer Portfolio</a>
+					<p>Student in ICT at Turku University of Applied Sciences</p>
+					<!-- <p>On this page you see a couple of my recent projects</p> -->
+				</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Main Page</a></li>
+						<li><a href="rts.html">RTS Project</a></li>
+						<li  class="active"><a href="dontstop3d.html">Don't Stop 3D</a></li  class="active">
+					</ul>
+					<ul class="icons">
+						<!-- <ul class="links">
+							<a href="">About me</a>
+						</ul> -->
+						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+					</ul>
+				</nav>
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h2>Don't Stop 3D</h2>
+									<p>The game is set in a futuristic world where the player is a robot that has become self aware, and is now trying to escape this "testing factory" of some sort.</p>
+								</header>
+								<div class="image main">
+									<iframe  src="https://www.youtube.com/embed/-FgSqO-o0Z4" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<header class="major">
+									<h2>Features</h2>
+								</header>
+								<h2>Path Generation</h2>
+								<p>At the moment the path generation is very basic, I've made some world "block" prefabs and those get spawned in a random order, which then loops. Current plan is to make more of those blocks, to easily add more to the experience.</p>
+								<p>It would be nice to have a randomly generated map with more elements that get randomized, but I think that is outside the scale of this project for this school course.</p>
+								
+								<h2>Player mechanics</h2>
+								<h4>Stamina</h4>
+								<p>I've implemented a stamina system to the game, to make the player have something else to worry about as well, other than the map itself.</p>
+								<p>Currently basic movement such as running and jumping don't cost stamina, while sprinting and wallrunning do.</p>
+								<h4>Wallrun</h4>
+								<p>In the video you see the 0.1 version of the wallrun mechanic. It's simply there to get a visual reference on what the feature will enable the player to do. I plan on making it seem more natural, in the sense that when the player jumps on the wall, the wallrun itself responds to the physics already affecting to the player. For example if you are already going down fast, you simply can't wallrun. Depending on how much speed the player still has going upwards, the longer the wallrun.</p>
+								<h4>Sliding</h4>
+								<p>Not yet implemented in the game, but relatively easy to add. At this state of the game, there might not be too much need for this feature, but I plan on adding more dynamic elements to the map, such as moving traps or other lethal elements, which then could be dodged with the slide for example.</p>
+								<br><br>
+								<header class="major">
+									<h2>Project Goal</h2>
+								</header>
+								<h2>ICT Showroom</h2>
+								<p>The main goal is to have this project ready when we are going to present this project march 5th in ICT Showroom public event in Turku, and should have all the features mentioned above ready by then.</p>
+							</section>
+					</div>
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP Templates</a></li></ul>
+					<li>Edited By: Jaakko Puisto</li>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

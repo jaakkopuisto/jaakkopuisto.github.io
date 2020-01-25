@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Jaakko Puisto - Game Developer Portfolio</a>
+					<p>Student in ICT at Turku University of Applied Sciences</p>
+					<!-- <p>On this page you see a couple of my recent projects</p> -->
+				</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Main Page</a></li>
+						<li  class="active"><a href="rts.html">RTS Project</a></li>
+						<li><a href="dontstop.html">Don't Stop 3D</a></li>
+					</ul>
+					<ul class="icons">
+						<!-- <ul class="links">
+							<a href="">About me</a>
+						</ul> -->
+						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+					</ul>
+				</nav>
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								<h2>RTS Project</h2>
+							</header>
+							<div class="image main">
+								<iframe  src="https://www.youtube.com/embed/ZsgD4cLDS6U?" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<header class="major">
+								<h2>Features</h2>
+							</header>
+							<h2>Camera</h2>
+							<p>This project started from me trying to create a nice "orbit" style camera, with which it would be easy to look around the game view while prototyping. I love playing Total War games, and thought that their camera style would be perfect for this instance.</p>
+							<p>the camera has automatic height adjustment, which uses similar movement smoothing as the camera rotation. It also uses raycasting to detect objects in it's close proximity, and adjusts height to prevent clipping effects.</p>
+							<h2>Pathfinding</h2>
+							<p>Next I needed to figure out more about how I can create AI for this large scale RTS game. I didn't really have any prior experience working with AI, so I spent quite a lot of time just messing around.</p>
+							<p>For now I've settled with Unitys own AI pathfinding system, due to the very easy integration to any project. I also didn't want to spend too long figuring out efficient ways of computing AI, because I felt like it would require better knowledge of C#. Also I was very eager on getting other features of the game up and running.</p>
+							<h2>Unit Movement & Input</h2>
+							<p>The game generates unit positions from the mouse position on screen, and spreads them out. I also added some randomness to the position generation, so it would seem more natural.</p>
+							<p>The game already features basic unit control groups, but I've yet to implement them fully. I'm working on making the camera transition from the current position to the control groups location if the group's hotkey is pressed twice.</p>
+							<br><br>
+
+							<header class="major">
+								<h2>Project Goal</h2>
+							</header>
+							<h2>Look and feel</h2>
+							<p>I'm a massive Warhammer 40k fan, and I want this project to be set in that fantasy universe.</p>
+							<p>The game should feel and play like many previous RTS games but I'll also add my own twists to it. Think of Starcraft 2 or Age of empires II in terms of the different unit commands: attack move, patrol, guard etc. Combine that with Company of Heroes style of unit control, with dynamic cover systems. I'd like to make basebuilding a key feature in this game.</p>
+							<p></p>
+							<h2>Learning</h2>
+							<p>I don't think I'm going to finish this project anytime soon, since RTS games have a lot of things to worry about development wise. I'm not going to worry about that, and just try to make the game I want to make, and learn as much as I can in the process. </p>
+						</section>
+					</div>
+
+				
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP Templates</a></li></ul>
+					<li>Edited By: Jaakko Puisto</li>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
