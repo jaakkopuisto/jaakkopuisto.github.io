@@ -46,6 +46,7 @@
 						<section class="post">
 							<header class="major">
 								<h2>RTS Project</h2>
+								<p>The goal is the make a large scale RTS game, set in the Warhammer 40k universe.</p>
 							</header>
 							<div class="image main">
 								<iframe  src="https://www.youtube.com/embed/ZsgD4cLDS6U?" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -55,10 +56,10 @@
 							</header>
 							<h2>Camera</h2>
 							<p>This project started from me trying to create a nice "orbit" style camera, with which it would be easy to look around the game view while prototyping. I love playing Total War games, and thought that their camera style would be perfect for this instance.</p>
-							<p>the camera has automatic height adjustment, which uses similar movement smoothing as the camera rotation. It also uses raycasting to detect objects in it's close proximity, and adjusts height to prevent clipping effects.</p>
+							<p>The camera has automatic height adjustment, which uses similar movement smoothing as the camera rotation. It also uses raycasting to detect objects in it's close proximity, and adjusts height to prevent clipping effects.</p>
 							<h2>Pathfinding</h2>
 							<p>Next I needed to figure out more about how I can create AI for this large scale RTS game. I didn't really have any prior experience working with AI, so I spent quite a lot of time just messing around.</p>
-							<p>For now I've settled with Unitys own AI pathfinding system, due to the very easy integration to any project. I also didn't want to spend too long figuring out efficient ways of computing AI, because I felt like it would require better knowledge of C#. Also I was very eager on getting other features of the game up and running.</p>
+							<p>For now I've settled with Unitys own AI pathfinding system(Navmesh System), due to the very easy integration to any project. The Navmesh system has one big problem: being processed only by a single thread. This propably will become a problem in the future, and I'll have to look into it more when the time is right. Now I'm very eager on getting other features of the game up and running.</p>
 							<h2>Unit Movement & Input</h2>
 							<p>The game generates unit positions from the mouse position on screen, and spreads them out. I also added some randomness to the position generation, so it would seem more natural.</p>
 							<p>The game already features basic unit control groups, but not the way I want them to act. I'm working on making the camera transition from the current position to the control groups location if the group's hotkey is pressed twice. The reason why I'm having an obstacle here, is that I want the camera to switch position so that it center's the view on the currently selected units.</p>
@@ -70,7 +71,7 @@
 								<h2>Project Goal</h2>
 							</header>
 							<h2>Look and feel</h2>
-							<p>I'm a massive Warhammer 40k fan, and I want this project to be set in that fantasy universe.</p>
+							<p>I'm a massive Warhammer 40k fan, and I want this project to be set in that fantasy universe. I plan on adding in a couple different races, when I'm able to produce my own 3D content. I'm currently learning how to model in Blender.</p>
 							<p>The game should feel and play like many previous RTS games but I'll also add my own twists to it. Think of Starcraft 2 or Age of empires II in terms of the different unit commands: attack move, patrol, guard etc. Combine that with Company of Heroes style of unit control, with dynamic cover systems. I'd like to make basebuilding a key feature in this game.</p>
 							<p></p>
 							<h2>Learning</h2>
