@@ -49,37 +49,52 @@
 									<p>The game is set in a futuristic world where the player is a robot that has become self aware, and is now trying to escape this "testing factory" of some sort.</p>
 								</header>
 								<div class="image main">
-									<iframe  src="https://www.youtube.com/embed/G82AOGMVlT0" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe  src="https://www.youtube.com/embed/ohMwJiHf2H8" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
 								<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G82AOGMVlT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 								<h2>Disclaimer</h2>
-								<p>This game started out as a solo project, which I made on a school course. This spring I had the opportunity to keep working on the game, with a group to aid me.</p>
-								<p>On this current course my roles are <strong>Main programmer</strong>, <strong>Main game designer</strong> and <strong>Project lead</strong>
+								<p>This game started out as a solo project, which I made on a school course last autumn. This spring I had the opportunity to keep working on the game, with a group to aid me. <br></p>
+								<h2>Starting Point:</h2>
+								<div class="image main">
+									<iframe  src="https://www.youtube.com/embed/oQHSHb4PqTY" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<p><strong>As you can see, in the past 8 weeks the game has gone through a massive overhaul.</strong> On this project my roles are <strong>Main programmer</strong>, <strong>Main game designer</strong> and <strong>Project lead</strong></strong></p>
+								
+								
+									<p>In this project I was responsible for..<br>
+									<strong>Game design:</strong> Level designing, Player movement & animation, core gameplay, UI & UX, audio balancing<br>
+									<strong>Programming:</strong> Everything expect one or two small scripts</p>
 									<header class="major"></p>
-									
-									<h2>Features</h2>
+									<h2>Game Features</h2>
 								</header>
 								<h2>Path Generation</h2>
-								<p>At the moment the path generation is very basic, I've made some world "block" prefabs and those get spawned in a random order, which then loops. Current plan is to make more of those blocks, to easily add more to the experience.</p>
-								<p>It would be nice to have a randomly generated map with more elements that get randomized, but I think that is outside the scale of this project for this school course.</p>
+								<p>The level constists of "block" prefabs (<i>Large chunks of playable area</i>) and those get spawned in a random order based on an algorithm. When the player progresses, those blocks get recycled to spawn again in front of the player, with randomness elements involved(such as: random block orientation) </p>
+								<p>The level also gets progressively more difficult as the player progresses, to keep the gameplay interesting. This, and the random generation elements together make up for nice replay value for the player.</p>
 								
 								<h2>Player mechanics</h2>
 								<h4>Stamina</h4>
-								<p>I've implemented a stamina system to the game, to make the player have something else to worry about as well, other than the map itself.</p>
-								<p>Currently basic movement such as running and jumping don't cost stamina, while sprinting and wallrunning do.</p>
+								<p>The stamina system is a nice way to keep the player engaged with the other mechanics, and also to balance them so that the player has to think when to use the mechanics efficiently.</p>
 								<h4>Wallrun</h4>
-								<p>The current wallrun system works well, but I'm wondering whether to improve the wallrun's path. Currently the wallrun stays at a certain height, and stops when either the animation is done, or the player jumps or decides to move away from the wall.</p>
-								<p>I plan on making it seem more natural, in the sense that when the player jumps on the wall, the wallrun itself responds to the physics already affecting to the player. For example if you are already going down fast, you simply can't wallrun. Depending on how much speed the player still has going upwards, the longer the wallrun.</p>
+								<p>Wallrunning is a very key feature in this game, and it had to be done right. The mechanic allows the player to move in the map very elegantly, managing some hard jumps, and dodging all kinds of traps.</p>
+								<p>The mechanic also opened up more variety in terms of level design, which all in all was the goal here.</p>
 								<h4>Sliding</h4>
-								<p>While the feature is implemented in the game, the current map design doesn't have many opportunities for the feature to be used. I'm currently working on reworking the map design to fit the new movement mechanics and make it more challenging</p>
+								<p>While the mechanic is implemented in the game, the current map design doesn't have many opportunities for it to be used. I'm currently working on reworking the map design to fit the new mechanic.</p>
 								<br><br>
+								<!-- <h2>Obstacles & threats</h2>
+								<h4>Lasers</h4>
+								<p>Helooooo</p>
+								<h2 style="text-align: center;">Current state of the game & <br> plans going forward</h2>
+								<p>The game is at a nice state currently: the features we wanted to have in the game are in, and they work really nicely. </p>
+								<br><br> -->
+								
+								
 								<header class="major">
 									<h2>Project Goal</h2>
 								</header>
-								<h2>ICT Showroom</h2>
-								<p>The main goal is to have this project ready when we are going to present this project march 5th in ICT Showroom public event in Turku, and should have all the features mentioned above ready by then.</p>
-								<h2>Learning</h2>
-								<p>This is a great opportunity to learn more about the Unity's mecanim system. Blend trees and animation events are something that could prove useful, to add more elements to the player animations.</p>
+								<h2>Showcases</h2>
+								<p>The main goal for this project was to have it in a presentable state by 05/03/2020 for <strong>ICT Showroom</strong>, which is a public event in Turku. We succeeded in this goal, and got some very nice feedback from players, so I'm proud of the effort.</p>
+								<!-- <h2>Learning</h2>
+								<p>This is a great opportunity to learn more about the Unity's mecanim system. Blend trees and animation events are something that could prove useful, to add more elements to the player animations.</p> -->
 							</section>
 					</div>
 				<!-- Copyright -->
