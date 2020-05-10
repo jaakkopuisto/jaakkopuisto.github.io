@@ -55,6 +55,10 @@ ol, ul {
 	
 }
 
+video{
+	width: 100%;
+}
+
 .IntroText{
 	padding: 20px 40px;
 	font-size: 1.5rem;
@@ -3628,7 +3632,6 @@ input, select, textarea {
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
 		overflow: hidden;
-		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
 		max-width: 56rem;
