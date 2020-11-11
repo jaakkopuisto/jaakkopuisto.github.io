@@ -42,36 +42,64 @@
 						<section class="post">
 							<header class="major">
 								<h2>RTS Project</h2>
-								<p>The goal is the make a large scale RTS game, set in the Warhammer 40k universe.</p>
+								<p> The goal is the make a RTS game in an Original Scifi setting. <br> Art style is yet to be determined</p>
 							</header>
 							<div class="image main">
-								<iframe  src="https://www.youtube.com/embed/ZsgD4cLDS6U?" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe  src="https://www.youtube.com/embed/ock4kD6sohw" class="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
+							<p><strong>*Disclaimer* </strong>This page currently only focuses on the foundation of the systems that need to be in place for the project AKA programming<br>
+							The graphics 99% placeholder, and Unit Audio Responses are taken from RTS game Dawn of War II for educational purposes only. I do not intend to use them in production.
+							</p>
 							<header class="major">
-								<h2>Features</h2>
+								<h2>Setting the terms</h2>
 							</header>
-							<h2>Camera</h2>
-							<p>This project started from me trying to create a nice "orbit" style camera, with which it would be easy to look around the game view while prototyping. I love playing Total War games, and thought that their camera style would be perfect for this instance.</p>
-							<p>The camera has automatic height adjustment, which uses similar movement smoothing as the camera rotation. It also uses raycasting to detect objects in it's close proximity, and adjusts height to prevent clipping effects.</p>
-							<h2>Pathfinding</h2>
-							<p>Next I needed to figure out more about how I can create AI for this large scale RTS game. I didn't really have any prior experience working with AI, so I spent quite a lot of time just messing around.</p>
-							<p>For now I've settled with Unitys own AI pathfinding system(Navmesh System), due to the very easy integration to any project. The Navmesh system has one big problem: being processed only by a single thread. This propably will become a problem in the future, and I'll have to look into it more when the time is right. Now I'm very eager on getting other features of the game up and running.</p>
-							<h2>Unit Movement & Input</h2>
-							<p>The game generates unit positions from the mouse position on screen, and spreads them out. I also added some randomness to the position generation, so it would seem more natural.</p>
-							<p>The game already features basic unit control groups, but not the way I want them to act. I'm working on making the camera transition from the current position to the control groups location if the group's hotkey is pressed twice. The reason why I'm having an obstacle here, is that I want the camera to switch position so that it center's the view on the currently selected units.</p>
-							
-							<h2>Object Pooling</h2>
-							<p>Object pooling was a must to learn, to work around the costly process of creating and destroying objects during the gameplay. Very self explanatory, but it was very rewarding seeing the performance improvement after implementing this feature. Currently pooled objects include particle systems, and game objects.</p>
+							<p>RTS games excel when their complex systems work efficiently and thus allow the player's actions to be responsive. That means this game needs to do that as well. I intend to optimize this game for current gen systems, well above the 60 fps mark. As such, my main focus has been improving project component modularity and efficiency. <br>
+							With that out of the way, lets see what new Systems I've added, and what has been re-designed... </p>
+							<h1>Re-Designed Systems</h1>
+							<h2>Scriptable objects</h2>
+							<p>Many of the games systems have been re-designed to be as data-oriented as possible with the use of scriptable objects. This allows for much better project management as the project grows, and setting up new things wont become progressively harder. <br>
+							These Systems include: <br> 
+								 <strong> - Audio (Unit Responses, Guns, Impacts and other effects) </strong><br>
+								 <strong> - Units (Stats, armor and attack type, UI icons)</strong> <br>
+								 <strong> - Projectiles / Ammo types</strong>
+							</p>
+							<h2>Events, Custom Update Loops and Space Partitioning</h2>
+							<p>These systems combined are massive factors in reducing the amount of unnecessary cpu usage. I was also able to implement a more advanced way of checking for nearby enemy units with the use of  Space Partitioning, using a so called <strong><a href="https://en.wikipedia.org/wiki/K-d_tree">K-D tree</a></strong>. These systems reduced the cpu usage with Unit logic to great effect. Due to these optimizations, 50 vs 50 unit battle barely raises cpu usage. While these systems take a bit of time to get used to and setup, it's easily worth the effort and essential for the game I intend to develop.<br>
+							Currently implemented: <br>
+								<strong> - Mouse input</strong> <br>
+								<strong> - Updating UI (Unit HP, enabling and disabling elements)</strong> <br>
+								<strong> - Unit Logic & Commands	</strong>
+							</p>
+							<h1>New Systems</h1>
+							<h2>Audio processing & Music</h2> 
+								<strong> Volume and filter roll off over distance:</strong> Most of the sounds will implement processing to make them more quiet the further the camera is from them to create a sense of scale and realism. Currently combat sounds are the only ones that have this implemented. <br>
+								<strong>Audio clip limiting:</strong> Many things are happening at the same time in an RTS game just by itself, and also the players actions cause things to give audio feedback almost each second. This makes it essential to have a system in place to limit the amount of audioclips playing at a given time. Unit command inputs are a great example: the combat of this type of game requires multiple actions per second and having that many audioclips playing will result in overall a bad experience. <br>
+								<strong>MUSIC</strong>  made by<a href="https://soundcloud.com/jesse-kiis"> Jesse Kiiskinen</a> </p>
+							<h2>Fog of war</h2>
+							<p>A must have feature in RTS games, but a whole new beast for me as a developer. This task required me to delve deep into programming shaders, and I'm glad to say that the result is *mostly* what I wanted. In terms of performance / looks, i balanced this a bit heavier on the looks side. I think the tradeoff was well worth it. <br> 
+							<strong> Current limitation:</strong> Does not take the Y axis(height) into account.</p>
+							<h2>UI & Minimap</h2>
+							<p>Altough placeholder, I like the look of the "in-game" scene UI already in terms of layout and sizing. <br>
+							The minimap works as intended, but as I have not included almost any optimizations on the graphics side, the minimap is taking quite a big of a performance hit. This will be mostly fixed, by simply rendering a low quality rendered mesh for the ground. Currently, the minimap renders the terrain as a whole each frame.</p>
+							<h1>What's next?</h1>
+							<h3>AI & Base building</h3>
+							<p>I am well aware that some core features are still completely missing from the game, including <strong>Advanced AI behaviours and commands, Base Building</strong>. This has been a concious decision that I learned from my past mistakes. In order to keep the project moving forwards and not sideways, I need to write easily understandable, scalable code. That being said, I've made huge progress on that side of things and I'm very close to the point where I can start working on a new system. The ones above being considered, as they are high on the priority list.</p>
+							<h3>More Units!</h3> With the new additions of space partitioning and events, I'm confident I can soon start adding in different types of units and behaviours. As it stands, there's only two units in the game, and they even share all the same functionality. The existing systems regarding unit logic have been re-designed to have the ability to dynamically add more units, unit types, ammo types and so on.</p>
+							<!-- <h2>Other noteworthy systems:</h2>
+							<h4>Scene Management</h4>
+							<p>System that's done through only 2 efficiently written methods. 1 for changing current scene to another, and one to give the player feedback of the current status from the loading.</p>
+							<h4>Camera</h4>
+							<p>Has all the quality of live features you'd expect in an RTS. it has automatic height adjustment to terrain and also avoids clipping to objects, adjustable camera smoothing "amount".</p>
+							<h4>Pathfinding</h4>
+							<p>Unity navmesh system. I use the player input to generate positions/orders for the units where to move.</p>
+							<h4>Object Pooling</h4>
+							<p>Currently pooled objects include particle systems, and game objects.</p>
 							<br><br>
 							<header class="major">
 								<h2>Project Goal</h2>
 							</header>
 							<h2>Look and feel</h2>
-							<p>I'm a massive Warhammer 40k fan, and I want this project to be set in that fantasy universe. I plan on adding in a couple different races, when I'm able to produce my own 3D content. I'm currently learning how to model in Blender.</p>
-							<p>The game should feel and play like many previous RTS games but I'll also add my own twists to it. Think of Starcraft 2 or Age of empires II in terms of the different unit commands: attack move, patrol, guard etc. Combine that with Company of Heroes style of unit control, with dynamic cover systems. I'd like to make basebuilding a key feature in this game.</p>
-							<p></p>
-							<h2>Learning</h2>
-							<p>I don't think I'm going to finish this project anytime soon, since RTS games have a lot of things to worry about development wise. I'm not going to worry about that, and just try to make the game I want to make, and learn as much as I can in the process. </p>
+							<p>The game should feel and play like many previous RTS games but I'll also add my own twists to it. Think of Starcraft 2 or Age of empires II in terms of the different unit commands: attack move, patrol, guard etc. Combine that with Company of Heroes style of unit control, with dynamic cover systems. I'd like to make basebuilding a key feature in this game.</p> -->
 						</section>
 					</div>
 
